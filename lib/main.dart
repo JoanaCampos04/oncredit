@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:oncredit/pages/home.dart';
+import 'package:oncredit/pages/settings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'OnCredit',
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
       routes: {
         // Página inicial
         '/': (context) => const HomePage(),
+        // Configurações
+        '/settings': (context) => const SettingsPage(),
       },
     );
   }
